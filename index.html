@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <style>
-      h1 {
-        margin-top: 10%;
+      .container {
+        text-align: center;
+        margin-top: 15%;
+        vertical-align: middle;
       }
-      .container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
+      #no {
+        position: absolute;
+        margin-left: 5px;
       }
     </style>
     <meta charset="UTF-8" />
@@ -18,14 +18,25 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 align="center">Can I be with you this valentine's day?</h1>
     <div class="container">
-      <button id="yes">Yes</button>
+      <h1>Can I be with you this valentine's day?</h1>
+      <button onclick="popUp()">Yes</button>
       <button id="no">No</button>
     </div>
-
     <script>
-        
+      function popUp() {
+        alert("See you soon innaa!! Take Care always!");
+      }
+
+      var b = document.getElementById("no");
+      b.addEventListener("click", change);
+      function change() {
+        var i = Math.floor(Math.random() * 1000) + 1;
+        var j = Math.floor(Math.random() * 700) + 1;
+
+        b.style.left = i + "px";
+        b.style.right = j + "px";
+      }
     </script>
   </body>
 </html>
