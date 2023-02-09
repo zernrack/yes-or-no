@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      .container {
-        text-align: center;
-        margin-top: 15%;
-        vertical-align: middle;
-      }
-      #no {
-        position: absolute;
-        margin-left: 5px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,12 +10,14 @@
   <body>
     <div class="container">
       <h1>Can I be with you this valentine's day?</h1>
-      <button onclick="popUp()">Yes</button>
-      <button id="no">No</button>
+      <button class="button-3" onclick="popUp()">Yes</button>
+      <button class="button-3" id="no">No</button>
     </div>
     <script>
       function popUp() {
-        alert("See you soon innaa!! Take Care always!");
+        alert(
+          "See you soon innaa!! Take Care always! Sorry na agad sa design hehehe"
+        );
       }
 
       var b = document.getElementById("no");
